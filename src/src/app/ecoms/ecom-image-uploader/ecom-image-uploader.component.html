@@ -1,0 +1,37 @@
+<nb-card>
+    <nb-card-header>Upload Image</nb-card-header>
+    <nb-card-body>
+        <div class="row">
+            <div class="col-lg-6">
+                <form >
+                    <input class="w-50" type="file" nbInput fullWidth shape="rectangle" (change)="upload($event)"  placeholder="select image">
+                    <button nbButton class="ml-5" status="success" >Upload</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <nb-list  listenWindowScroll class="img-scroller text-center"  >
+                    <nb-list-item  >
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                    </nb-list-item>
+                    <nb-list-item  >
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                    </nb-list-item>
+                    <nb-list-item  >
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                    </nb-list-item>
+                    
+                </nb-list>
+            </div>
+        </div>
+
+        <div class="img-fluid" *ngIf="!url">
+            <img [src]="url"  class="img-fluid img-view">
+        </div>
+    </nb-card-body>
+</nb-card>
+
+
+ 

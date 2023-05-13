@@ -1,0 +1,81 @@
+.multi-image{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border: -2px solid red($color: #c42424);
+    border-radius: 10px;
+}
+.img-more-info{
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border: -2px solid red($color: #c42424);
+    border-radius: 10px;
+}
+.info-btn{
+    background-color: #457eac;
+    color: #fbfbff;
+}
+.info-btn:hover{
+    background-color: #01baef;
+    color: #fbfbff;
+    
+}
+.save-btn{
+    background-color: #46A094;
+    color: #fbfbff;
+}
+.cancel-btn{
+    background-color: #F74A8A;
+    color: #fbfbff;
+}
+.registration-btn{
+    background-color: #CE4257;
+    color: #fbfbff;
+}
+.pgm-table{
+    border:none;
+    background-color: #f1f8ff;
+}
+.fa-star{
+    background-color: #f1f8ff;
+}
+.fa-star-rated{
+    background-color: #eded18;
+}
+.primary-light{
+    background-color: #3162fc;
+    color: white;
+}
+.primary-light:hover{
+    background-color: #3162fc;
+    color: white;
+}
+.blue-light{
+    background-color: #4d06a5;
+    color: white;
+}
+.info-light{
+    background-color: #4885ED;
+    color: white;
+     
+}
+.info-light:hover{
+    background-color: #17A2B8;
+    color: white;
+}
+.warning-light{
+    background-color: #FFC107;
+    color: white;
+}
+.warning:hover{
+    background-color: #FD7E14;
+    color: white;
+}
+.danger{
+    background-color: #DC3545;
+    color: white;
+}
+.bg-color{
+    background-color: #d2e9ec;
+}

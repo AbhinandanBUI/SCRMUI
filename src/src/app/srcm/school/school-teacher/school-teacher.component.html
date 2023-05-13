@@ -1,0 +1,18 @@
+<nb-card>
+    <nb-card-header>
+        <div class="row">
+            <div class="col-md-4">
+                <span class="pt-3">Teacher Lists</span>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-2">
+                <button nbButton status="info" (click)="newTeacher()">Add new</button>
+                <!-- <button nbButton status="info">Add new</button> -->
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="viewDetails($event)">
+        </ng2-smart-table>
+    </nb-card-body>
+</nb-card>

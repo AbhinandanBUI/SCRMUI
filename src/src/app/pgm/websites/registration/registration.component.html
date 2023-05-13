@@ -1,0 +1,46 @@
+<nb-card class="bg-color">
+    <nb-card-header>Registered now</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="registrationForm" novalidate>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="name" class="form-label">First name</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth  formControlName="fname" placeholder="Abhi" required>
+                     
+                </div>
+                <div class="col-md-3">
+                    <label for="name" class="form-label">Last name</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth formControlName="lname" placeholder="Singh">
+                </div>
+                <div class="col-md-3">
+                    <label for="name" class="form-label">Phone number</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth formControlName="mobile" placeholder="999999999">
+                </div>
+                <div class="col-md-3">
+                    <label for="name" class="form-label">Email</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth formControlName="email" placeholder="abhi@gmail.com">
+                </div>
+                <div class="col-md-3 my-2">
+                    <label for="name" class="form-label">Gov id</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth formControlName="govid" placeholder="ACDB1234J">
+                </div>
+                <div class="col-md-3 my-2">
+                    <label for="name" class="form-label">Password</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth formControlName="password" placeholder="XXXXXXXXXX">
+                </div>
+                <div class="col-md-3 my-2">
+                    <label for="name" class="form-label">Confirm password</label>
+                    <input type="text" name="name" id="name" nbInput fullWidth formControlName="cpassword" placeholder="XXXXXXXXXX">
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button nbButton class="mx-3" status="success">Save</button>
+                    <button nbButton  status="danger" >Reset</button>
+                </div>
+            </div>
+        </form>
+
+    </nb-card-body>
+</nb-card>

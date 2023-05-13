@@ -1,0 +1,19 @@
+.img-view{
+    width: 140px;
+    height: 140px;
+    border: 2px solid rgb(255, 244, 244);
+    border-radius: 4px;
+    border:-145px ;
+    filter: blur(-145px);
+    // margin: 6px 8px;
+}
+
+.img-scroller{
+    height: 380px;
+}
+.img-view:hover{
+border: 2px solid red($color: #b42222);
+width: 180px;
+height: 180px;
+// transition: 1s;
+}

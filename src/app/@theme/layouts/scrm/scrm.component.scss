@@ -1,0 +1,43 @@
+@import '../../styles/themes';
+@import url('../../../pgm/pgm.scss');
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+//   .menu-sidebar ::ng-deep .scrollable {
+//     padding-top: nb-theme(layout-padding-top);
+//   }
+}
+
+// @import '../../styles/themes';
+// @import '~@nebular/theme/styles/global/breakpoints';
+// @import '~bootstrap/scss/mixins/breakpoints';
+
+// @include nb-install-component() {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   .menu-sidebar ::ng-deep .scrollable {
+//     padding-top: nb-theme(layout-padding-top);
+//   }
+//   .socials {
+//     font-size: 2rem;
+
+//     a {
+//       padding: 0.4rem;
+//       color: nb-theme(text-hint-color);
+//       transition: color ease-out 0.1s;
+
+//       &:hover {
+//         color: nb-theme(text-basic-color);
+//       }
+//     }
+//   }
+
+//   @include media-breakpoint-down(is) {
+//     .socials {
+//       font-size: 1.5rem;
+//     }
+//   }
+// }

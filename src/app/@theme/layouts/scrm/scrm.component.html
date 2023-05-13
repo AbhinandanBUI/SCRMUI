@@ -1,0 +1,52 @@
+<nb-layout windowMode>
+    <nb-layout-header fixed>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" (click)="headerRouting('')" >Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="headerRouting('About_US')"  >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="headerRouting('Contact_US')"  >Contact us</a>
+                    </li>
+
+
+                </ul>
+                <!-- <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search"   placeholder="Search" aria-label="Search">
+                    <button class="btn save-btn my-2 my-sm-0"   >Search</button>
+                    <button class="btn cancel-btn my-2 mx-2 my-sm-0"  (click)="headerRouting('Login')" >Login</button>
+                    <button class="btn registration-btn my-2 my-sm-0"   (click)="headerRouting('Registration')"   >Registration</button>
+                </div> -->
+            </div>
+        </nav>
+
+        <!-- grtger -->
+        
+    </nb-layout-header>
+
+    <nb-layout-column>
+        <ng-content select="router-outlet"></ng-content>
+    </nb-layout-column>
+
+    <nb-layout-footer fixed>
+        <span class="created-by">
+            Created with ♥ by <b><a href="https://akveo.page.link/8V2f" target="_blank">Akveo</a></b> 2019
+          </span>
+          <div class="socials">
+            <a href="#" target="_blank" class="ion ion-social-github"></a>
+            <a href="#" target="_blank" class="ion ion-social-facebook"></a>
+            <a href="#" target="_blank" class="ion ion-social-twitter"></a>
+            <a href="#" target="_blank" class="ion ion-social-linkedin"></a>
+          </div>
+    </nb-layout-footer>
+</nb-layout>

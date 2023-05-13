@@ -1,0 +1,146 @@
+<nb-card>
+    <nb-card-header>Product Details</nb-card-header>
+    <nb-card-body>
+        <div class="row">
+            <div class="col-lg-6">
+                <nb-card>
+                    <nb-card-body>
+                        <form>
+                            <input type="text" nbInput fullWidth class="my-1" placeholder="Product name" />
+                            <input type="text" nbInput fullWidth class="my-1" placeholder="Price">
+                            <textarea rows="5" nbInput fullWidth class="my-1" placeholder="Text Area"></textarea>
+                            <input type="text" nbInput fullWidth class="my-1" placeholder="Price" fullWidth />
+                        </form>
+                    </nb-card-body>
+                    <div class="text-center my-2">
+                        <button nbButton class="w-25" status="success">Save</button>
+
+                    </div>
+                </nb-card>
+            </div>
+            <div class="col-lg-6">
+                <nb-list  listenWindowScroll class="img-scroller text-center"  >
+                    <nb-list-item  >
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                    </nb-list-item>
+                    <nb-list-item  >
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                    </nb-list-item>
+                    <nb-list-item  >
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                    </nb-list-item>
+                    
+                </nb-list>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>
+
+<!-- <div class="row">
+    <div class="col-lg-12">
+        <nb-card>
+            <nb-card-header>Product Details</nb-card-header>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form class="form-group px-3">
+                        <input type="text" nbInput fullWidth class="my-1" placeholder="Product name" />
+                        <input type="text" nbInput fullWidth class="my-1" placeholder="Price">
+                        <textarea rows="5" nbInput shape="round" fullWidth class="my-1"
+                            placeholder="Text Area"></textarea>
+                        <input type="text" nbInput placeholder="Price" fullWidth class="my-1" />
+                    </form>
+
+                </div>
+                <div class="col-lg-6">
+                     (bottomThreshold)="loadNext(secondCard)"  
+                    <nb-list      
+                        >
+                        <nb-list-item>
+                            <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                            <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+
+                        </nb-list-item>
+                        
+                        <nb-list-item  >
+                            <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+
+                            <img src="../../../assets/images/camera1.jpg" class="img-view " alt="">
+                        </nb-list-item>
+                        
+                    </nb-list>
+                   
+                </div>
+                <div class="row">
+                    <button   nbButton   outline status="primary">
+                        Save
+                     </button>
+                </div>
+               
+            </div>
+        </nb-card>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+
+        <nb-card>
+            <nb-card-header>Select</nb-card-header>
+            <nb-card-body>
+                <nb-select selected="1">
+                    <nb-option value="1">Option 1</nb-option>
+                    <nb-option value="2">Option 2</nb-option>
+                </nb-select>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>Validation States</nb-card-header>
+            <nb-card-body>
+                <input type="text" nbInput fullWidth status="info" placeholder="Input with Info">
+                <input type="text" nbInput fullWidth status="success" placeholder="Warning Input">
+                <input type="text" nbInput fullWidth status="warning" placeholder="Danger Input">
+                <input type="text" nbInput fullWidth status="danger" placeholder="Danger Input">
+                <input type="text" nbInput fullWidth status="primary" placeholder="Input with Primary">
+                <div class="validation-checkboxes">
+                    <nb-checkbox status="success">Success Checkbox</nb-checkbox>
+                    <nb-checkbox status="warning">Warning Checkbox</nb-checkbox>
+                    <nb-checkbox status="danger">Danger Checkbox</nb-checkbox>
+                </div>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>Checkboxes & Radios</nb-card-header>
+            <nb-card-body class="checkbox-radio">
+                <div class="demo-items">
+                    <nb-checkbox>Checkbox 1</nb-checkbox>
+                    <nb-checkbox checked>Checkbox 2</nb-checkbox>
+                </div>
+                <div class="demo-items">
+                    <nb-radio-group [(value)]="radioGroupValue">
+                        <nb-radio [value]="'This is value 1'">
+                            Radio 1
+                        </nb-radio>
+                        <nb-radio [value]="'This is value 2'">
+                            Radio 2
+                        </nb-radio>
+                        <nb-radio [value]="'This is value 3'">
+                            Radio 3
+                        </nb-radio>
+                    </nb-radio-group>
+                </div>
+                <div class="demo-items">
+                    <nb-checkbox disabled>Disabled Checkbox</nb-checkbox>
+                    <nb-radio-group disabled>
+                        <nb-radio [value]="'Disabled Value'">
+                            Disabled Radio
+                        </nb-radio>
+                    </nb-radio-group>
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div> -->

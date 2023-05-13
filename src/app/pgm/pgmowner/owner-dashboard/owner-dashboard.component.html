@@ -1,0 +1,99 @@
+<nb-card>
+  <nb-card-header>Dashboard </nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-md-4">
+        <nb-card>
+          <nb-card-header class="info-light">
+            <h6 class="test-center">Room </h6>
+          </nb-card-header>
+          <nb-card-body>
+            <table class="table">
+              <tr>
+                <td>Total rooms:</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Booked :</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Available :</td>
+                <td>23</td>
+              </tr>
+            </table>
+            
+          </nb-card-body>
+        </nb-card>
+      </div>
+     
+      <div class="col-md-4">
+        <nb-card>
+          <nb-card-header class="info-light">
+            <h6 class="test-center">Amount </h6>
+          </nb-card-header>
+          <nb-card-body>
+            <table class="table">
+              <tr>
+                <td>Total rooms:</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Booked :</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Available :</td>
+                <td>23</td>
+              </tr>
+            </table>
+            
+          </nb-card-body>
+        </nb-card>
+      </div>
+     
+      <div class="col-md-4">
+        <nb-card>
+          <nb-card-header class="info-light">
+            <h6 class="test-center">Services Request </h6>
+          </nb-card-header>
+          <nb-card-body>
+            <table class="table">
+              <tr>
+                <td>Total rooms:</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Booked :</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Available :</td>
+                <td>23</td>
+              </tr>
+            </table>
+            
+          </nb-card-body>
+        </nb-card>
+      </div>
+     
+     
+    </div>
+  </nb-card-body>
+
+</nb-card>
+
+<button nbButton status="info" (click)="hello(dialong)">Hello</button>
+
+<ng-template #dialong  let-data let-ref="dialogRef">
+
+  <nb-card>
+    <nb-card-header>
+    <h6>Dialong Service</h6>
+    </nb-card-header>
+    <nb-card-body>
+      <button nbButton status="success">Submit</button>
+      <button nbButton status="danger" class="mx-3" (click)="ref.close()">cancel</button>
+    </nb-card-body>
+  </nb-card>
+</ng-template>

@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <nb-card class="col-md-4">
+        <nb-card-header>Login</nb-card-header>
+        <nb-card-body class="my-3">
+            <form [formGroup]="LoginForm">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <label for="userid" class="form">User Id</label> -->
+                        <input type="text" id="userid" formControlName="userid" nbInput fullWidth shape="round" placeholder="User Id">
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <!-- <label for="userid" class="form">Pass</label> -->
+                        <input type="text" id="userid" formControlName="password" nbInput fullWidth shape="round" placeholder="password">
+                    </div>
+                    <div class="col-md-12 text-center mt-4">
+                        <!-- <label for="userid" class="form">Pass</label> -->
+                        <button shape="round" [disabled]="!LoginForm.valid" (click)="Login()" class=" btn save-btn">Login</button>
+                        <button shape="round" class="mx-2 btn cancel-btn" (click)="LoginForm.reset()">Reset</button>
+                    </div>
+                </div>
+            </form>
+          
+        </nb-card-body>
+    </nb-card>
+    <div class="col-md-4"></div>
+
+</div>

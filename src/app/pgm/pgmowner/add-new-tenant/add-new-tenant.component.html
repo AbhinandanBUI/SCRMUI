@@ -1,0 +1,206 @@
+<!-- <nb-card>
+    <nb-card-header>Add new tenant </nb-card-header>
+    <nb-card-body>
+
+        <form >
+            <div class="row">
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Full name</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder="Abhi Singh">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Mobile </label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder="9999999999">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Email</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder="abc@gmail.com">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Address</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Rent amount</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Security fees</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Security fees</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Governtment Id</label>
+                    <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Document photo</label>
+                    <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Document photo</label>
+                    <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Document photo</label>
+                    <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                <hr>
+                <div class="col-md-3 my-1">
+                    <label for="name" class="form-label">Document photo</label>
+                    <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                </div>
+                 
+            </div>
+        </form>
+    </nb-card-body>
+</nb-card> -->
+<form [formGroup]="TenantRegistrationForm">
+<div class="accordions-container row">
+    <div class="accordion-container col-md-12 col-lg-12 col-xxxl-12">
+      <nb-accordion>
+        <nb-accordion-item #item>
+          <nb-accordion-item-header>
+            Personal Details
+          </nb-accordion-item-header>
+          <nb-accordion-item-body>
+          
+              <div class="row">
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Full name</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth formControlName="fullname" placeholder="Abhi Singh">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Mobile </label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth formControlName="mobile" placeholder="9999999999">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Email</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth formControlName="mobile" placeholder="abc@gmail.com">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Address</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth formControlName="mobile" placeholder=".....">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Rent amount</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth formControlName="mobile" placeholder=".....">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Security fees</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth formControlName="mobile" placeholder=".....">
+                  </div>
+                  <!-- <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Security fees</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                  </div> -->
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Governtment Id</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                  </div>
+                 
+                   
+              </div>
+        
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+  
+        <nb-accordion-item>
+          <nb-accordion-item-header>
+            Address
+          </nb-accordion-item-header>
+          <nb-accordion-item-body>
+          
+              <div class="row">
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">House no/ colony</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder="Abhi Singh">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Landmark/nearest place </label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder="9999999999">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">City</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder="abc@gmail.com">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">District</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">State</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Pincode</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                  </div>
+                  <div class="col-md-3 my-1">
+                      <label for="name" class="form-label">Preview</label>
+                      <input type="text" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+                  </div>
+                 
+                   
+              </div>
+          
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+  
+        <nb-accordion-item>
+          <nb-accordion-item-header>
+            Document
+          </nb-accordion-item-header>
+          <nb-accordion-item-body>
+            <form  >
+              <div class="row">
+                <div class="col-md-3 my-1">
+                  <label for="name" class="form-label">Your  photo</label>
+                  <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+              </div>
+              <div class="col-md-3 my-1">
+                  <label for="name" class="form-label">Document photo</label>
+                  <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+              </div>
+              <div class="col-md-3 my-1">
+                  <label for="name" class="form-label">Document photo</label>
+                  <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+              </div>
+              <hr>
+              <div class="col-md-3 my-1">
+                  <label for="name" class="form-label">Document photo</label>
+                  <input type="file" name="fullname" id="fullname" nbInput fullWidth placeholder=".....">
+              </div>
+              </div>
+            </form>
+           
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+      </nb-accordion>
+    </div>
+  
+   
+  </div>
+</form>
+  <!-- preview page -->
+  <br>
+
+  <nb-card>
+    <nb-card-header>Preivew </nb-card-header>
+    <nb-card-body>
+      
+    </nb-card-body>
+    <nb-card-footer>
+      <div class="row">
+        <div class="col-md-2">
+          <button nbButton status="success" (click)="SaveTenant()">Save</button>
+        </div>
+        <div class="col-md-2">
+          <button nbButton status="danger">Reset</button>
+        </div>
+      </div>
+    </nb-card-footer>
+  </nb-card>
