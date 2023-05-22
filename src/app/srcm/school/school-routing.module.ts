@@ -7,7 +7,8 @@ import { SchoolTeacherComponent } from './school-teacher/school-teacher.componen
 import { SchoolStudentComponent } from './school-student/school-student.component';
 import { AddNewTeacherComponent } from './school-teacher/add-new-teacher/add-new-teacher.component';
 import { NotActiveComponent } from './not-active/not-active.component';
- 
+import { SrcmDashboardComponent } from '../srcm-dashboard/srcm-dashboard.component';
+
 const routes: Routes = [{
   path: '',
   component: SchoolComponent,
@@ -32,7 +33,11 @@ const routes: Routes = [{
       path: 'students',
       component: SchoolStudentComponent,
     },
-  
+    {
+      path: 'principledetail',
+      component: SrcmDashboardComponent,
+    },
+
     {
       path: '',
       redirectTo: 'Dashboard',
