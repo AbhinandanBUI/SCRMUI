@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbAccordionModule, NbAlertModule, NbBadgeModule, NbButton, NbButtonModule, NbCardModule, NbDatepickerModule, NbDialogModule, NbFormFieldModule, NbInputModule, NbListModule, NbMenuModule, NbStepperModule, NbTableModule, NbTabsetModule, NbTreeGridModule, NbWindowModule, NbWindowRef } from '@nebular/theme';
+import { NbAccordionModule, NbAlertModule, NbBadgeModule, NbButton, NbButtonModule, NbCardModule, NbDatepickerModule, NbDialogModule, NbFormFieldModule, NbInputModule, NbListModule, NbMenuModule, NbSpinnerModule, NbStepperModule, NbTableModule, NbTabsetModule, NbTreeGridModule, NbWindowModule, NbWindowRef } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -37,7 +37,7 @@ import { RouterModule } from '@angular/router';
     NbDialogModule.forRoot(),
     Ng2SmartTableModule,
     // NbAccordionModule
-
+    NbSpinnerModule
 
 
   ],
@@ -59,7 +59,8 @@ import { RouterModule } from '@angular/router';
     NbMenuModule,
     ThemeModule,
     ReactiveFormsModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    NbSpinnerModule
   ],
 
 

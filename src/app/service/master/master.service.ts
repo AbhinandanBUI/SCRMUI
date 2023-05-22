@@ -8,7 +8,7 @@ import { environment } from '../../../environments/environment';
 export class MasterService {
   private baseURL = environment.backendBaseURL + 'api/';
   constructor(private _http: HttpClient) {}
- 
+
   post(actionName,methodName, body) {
     return this._http.post<any>(
       this.baseURL + actionName+'/' + methodName,
@@ -23,11 +23,16 @@ export class MasterService {
       this.baseURL + actionName+'/' + methodName + '?id=' + Id
     );
   }
-  
+
   // getbyId
   getItemById(actionName,methodName, Id) {
     return this._http.get<any>(
       this.baseURL + actionName +'/'+ methodName + '?id=' + Id
+    );
+  }
+  getAddress(Id) {
+    return this._http.get<any>(
+      this.baseURL + 'commonAPI' +'/'+ 'pincode/' +  Id
     );
   }
 
@@ -45,7 +50,11 @@ export class MasterService {
       data
     );
   }
-
+getImages(imgname){
+  return this._http.get<any>(
+    this.baseURL +'commonAPI/getFiles/'+imgname
+  );
+}
   // files working
     // uploading file
 
@@ -71,11 +80,11 @@ export class MasterService {
     //   return this._http.request(req);
     // }
 
-    
+
   // getImage() {
   //   return this._http.get<any>(this.baseURL + '/assetApi/assets');
   // }
 
 }
 
- 
+

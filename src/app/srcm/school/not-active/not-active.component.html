@@ -1,9 +1,248 @@
+<nb-card #temp class="col-5" *ngIf="!schoolDetails">
+  <nb-card-header>Module not in active mode please active</nb-card-header>
+  <nb-card-body>
+
+  </nb-card-body>
+</nb-card>
+
+
+
+<nb-card [nbSpinner]="loading"
+nbSpinnerStatus="danger"
+nbSpinnerSize="large"
+nbSpinnerMessage="Loading....." >
+  <nb-card-header>
+    <div class="row">
+      <div class="col-md-4">School Details</div>
+      <div class="col-md-4"> <button nbButton status="info" (click)="princeple('')">School Details</button>
+      </div>
+      <div class="col-md-4">
+        <!-- <button nbButton status="info" class="mx-4" (click)="princeple('pr')">Princple Info</button> -->
+
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-accordion *ngIf="schoolDetails">
+    <nb-accordion-item #item>
+      <nb-accordion-item-header>
+        School Details
+      </nb-accordion-item-header>
+      <nb-accordion-item-body>
+        <form [formGroup]="schoolDetailform">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="schoolname" class="form-label">School name</label>
+                <input type="text" name="schoolname" id="schoolname" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="schoolname" placeholder="abc school">
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="schoolcode" class="form-label">School code</label>
+                <input type="text" name="schoolcode" id="schoolcode" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="schoolcode" placeholder="abc school">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="schoolnumber" class="form-label">Phone number</label>
+                <input type="text" name="schoolnumber" id="schoolnumber" nbInput status="info" fullWidth
+                  shape="semi-round" formControlName="schoolnumber" placeholder="abc school">
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="schoolemail" class="form-label">Email</label>
+                <input type="email" name="schoolemail" id="schoolemail" nbInput status="info" fullWidth
+                  shape="semi-round" formControlName="schoolemail" placeholder="abc school">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="schoolwebsite" class="form-label">Websites</label>
+                <input type="text" name="schoolwebsite" id="schoolwebsite" nbInput status="info" fullWidth
+                  shape="semi-round" formControlName="schoolwebsite" placeholder="abc school">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="state" class="form-label">State</label>
+                <input type="text" name="state" id="state" nbInput fullWidth shape="semi-round" formControlName="state"
+                  disabled placeholder="Uttar Pradesh">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="district" class="form-label">District</label>
+                <input type="text" name="district" id="district" nbInput fullWidth shape="semi-round"
+                  formControlName="district" disabled placeholder="Ballia">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="post" class="form-label">Post</label>
+                <input type="text" name="post" id="post" nbInput fullWidth shape="semi-round" formControlName="post"
+                  disabled placeholder="Pur">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="city" class="form-label">City</label>
+                <input type="text" name="city" id="city" nbInput fullWidth shape="semi-round" formControlName="city"
+                  disabled placeholder="Pur">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="pincode" class="form-label">Pincode</label>
+                <input type="text" name="pincode" id="pincode" nbInput fullWidth shape="semi-round"
+                  formControlName="pincode" [maxlength]="6" #pincode (change)="getAddress(pincode)" placeholder="121004"
+                  status="info">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="nearby" class="form-label">Near by landmarg</label>
+                <input type="text" name="nearby" id="nearby" nbInput fullWidth shape="semi-round"
+                  formControlName="nearby" status="info" placeholder="near shiv mandir">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="nearby" class="form-label">School logo </label>
+                <input type="file" name="schoollogo" id="schoollogo" nbInput fullWidth shape="semi-round"
+                   status="info" placeholder=" " (change)="uploadLogo($event)">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="Address" class="form-label">Address</label>
+                <textarea type="text" name="Address" id="Address" nbInput fullWidth shape="semi-round"
+                  formControlName="address" status="info"
+                  placeholder="near shiv mandir plot no 4 rajeev colony"></textarea>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <img [src]="imagesList" class="img-fix"  srcset="">
+            </div>
+            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="mt-4">
+                <button nbButton status="warning">Upload Logo</button>
+              </div>
+            </div> -->
+
+          </div>
+        </form>
+      </nb-accordion-item-body>
+    </nb-accordion-item>
+
+    <nb-accordion-item>
+      <nb-accordion-item-header>
+        School Founder Details
+      </nb-accordion-item-header>
+      <nb-accordion-item-body>
+        <form [formGroup]="schoolFounderDetailform">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="fname" class="form-label">full Name</label>
+                <input type="text" name="fname" id="fname" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="fname" placeholder="abc school">
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="femail" class="form-label">Email </label>
+                <input type="text" name="femail" id="femail" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="femail" placeholder="abc school">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="fnumber" class="form-label">Phone number</label>
+                <input type="text" name="fnumber" id="fnumber" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="fnumber" placeholder="abc school">
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </nb-accordion-item-body>
+    </nb-accordion-item>
+
+    <nb-accordion-item>
+      <nb-accordion-item-header>
+        School Principle Details
+      </nb-accordion-item-header>
+      <nb-accordion-item-body>
+        <form [formGroup]="schoolPrincipleDetailform">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="fname" class="form-label">full Name</label>
+                <input type="text" name="fname" id="fname" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="fname" placeholder="abc school">
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="femail" class="form-label">Email </label>
+                <input type="text" name="femail" id="femail" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="femail" placeholder="abc school">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="my-2">
+                <label for="fnumber" class="form-label">Phone number</label>
+                <input type="text" name="fnumber" id="fnumber" nbInput status="info" fullWidth shape="semi-round"
+                  formControlName="fnumber" placeholder="abc school">
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </nb-accordion-item-body>
+    </nb-accordion-item>
+    <nb-accordion-item>
+      <nb-accordion-item-header>
+        <div class="row">
+          <div class="col-md-4">
+            <button nbButton status="success" (click)="AddNewSchool()">Save</button>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <button nbButton  status="danger" (click)="schoolDetailform.reset()">Reset</button>
+            <!-- <button nbButton  status="danger" (click)="met()">Reset</button> -->
+
+          </div>
+        </div>
+
+
+      </nb-accordion-item-header>
+      <nb-accordion-item-body>
+
+      </nb-accordion-item-body>
+    </nb-accordion-item>
+
+  </nb-accordion>
+  <nb-card-footer>
+
+  </nb-card-footer>
+
+</nb-card>
+
 <nb-card>
-    <nb-card-header>Module not in active mode please active</nb-card-header>
-    <nb-card-body>
-        <button nbButton status="info">School Details</button>
-        <button nbButton status="info" class="mx-4">Princple Info</button>
-        <!-- <button nbButton status="success">School Details</button>
-        <button nbButton status="success">School Details</button> -->
-    </nb-card-body>
+  <nb-card-header>Header Images</nb-card-header>
+  <nb-card-body>
+      <div class="card-body"  >
+        <img [src]="imagesList" class="img-fix"  srcset="">
+
+      </div>
+  </nb-card-body>
 </nb-card>
